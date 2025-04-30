@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Explore Uganda</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Simple visitor count simulation
+        let visitorCount = 1024; 
+
+        function incrementVisitorCount() {
+            const countElement = document.getElementById("visitor-count");
+            visitorCount++;
+            countElement.textContent = visitorCount.toLocaleString();
+        }
+
+        // Simulate visitor count increasing every 3 seconds
+        setInterval(incrementVisitorCount, 3000);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="marquee">
+            <span>Welcome to Explore Uganda – The Pearl of Africa 🌍 | See What Visitors Say About Their Experiences! 🦁🌄</span>
+        </div>
+        
+        <h1>Traveler Reviews</h1>
+        <nav>
+            <a href="home.html#map">Home</a>
+            <a href="itinerary.html">Itinerary Planner</a>
+            <a href="bookings.html">Bookings</a>
+            <a href="business-listings.html">Local Businesses</a>
+            <a href="reviews.html">Reviews</a>
+        </nav>
+
+        <div class="visitor-counter">
+            <p>🌍 <strong>Total Visitors Who Shared Reviews:</strong> <span id="visitor-count">1,024</span></p>
+        </div>
+    </header>
+
+    <main>
+        <section id="review-intro">
+            <h2>Discover What Travelers Are Saying About Uganda</h2>
+            <p>Uganda is a land of unmatched beauty — from the misty mountains of Bwindi to the roaring waters of Murchison Falls. Read real reviews from travelers who have explored this stunning country, and share your own experiences to help others plan their journey!</p>
+        </section>
+
+        <section id="destination-reviews">
+            <h2>Popular Destination Reviews</h2>
+
+            <div class="review-card">
+                <h3>Bwindi Impenetrable National Park 🦍</h3>
+                <p><strong>Sarah, UK:</strong></p>
+                <p>"Gorilla trekking in Bwindi was a life-changing experience! The lush forest, the friendly guides, and seeing mountain gorillas up close was simply magical. Highly recommend it to any wildlife lover!"</p>
+                <p class="rating">★★★★★</p>
+            </div>
+
+            <div class="review-card">
+                <h3>Murchison Falls National Park 🌊</h3>
+                <p><strong>Daniel, Canada:</strong></p>
+                <p>"The boat safari along the Nile was breathtaking! We saw elephants, hippos, and crocodiles, and the view of Murchison Falls itself was awe-inspiring. Definitely one of the highlights of my trip!"</p>
+                <p class="rating">★★★★★</p>
+            </div>
+
+            <div class="review-card">
+                <h3>Lake Bunyonyi 🛶</h3>
+                <p><strong>Maria, Germany:</strong></p>
+                <p>"Lake Bunyonyi is a hidden gem. The peaceful atmosphere, canoe rides, and island hopping were perfect for relaxing after a busy safari. It felt like paradise!"</p>
+                <p class="rating">★★★★☆</p>
+            </div>
+
+            <div class="review-card">
+                <h3>Kidepo Valley National Park 🦓</h3>
+                <p><strong>Ahmed, UAE:</strong></p>
+                <p>"Kidepo is wild and remote — exactly what I was looking for! The landscapes were dramatic, and the abundance of wildlife was incredible. Felt like I had the park all to myself."</p>
+                <p class="rating">★★★★★</p>
+            </div>
+
+            <div class="review-card">
+                <h3>Sipi Falls ⛲</h3>
+                <p><strong>Emily, Australia:</strong></p>
+                <p>"Hiking to Sipi Falls was such an adventure! The views from the top were breathtaking, and the local coffee tour added a cultural touch to the experience. I’d visit again in a heartbeat!"</p>
+                <p class="rating">★★★★☆</p>
+            </div>
+        </section>
+
+        <section id="leave-review">
+            <h2>Share Your Experience</h2>
+            <p>Have you visited Uganda? We’d love to hear your thoughts! Share your experience below to help future travelers make the most of their visit.</p>
+            
+            <form action="submit-review.php" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="location">Location/Attraction:</label>
+                <input type="text" id="location" name="location" placeholder="E.g., Bwindi, Lake Victoria, Kampala" required>
+
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating">
+                    <option value="5">★★★★★ (5 Stars)</option>
+                    <option value="4">★★★★☆ (4 Stars)</option>
+                    <option value="3">★★★☆☆ (3 Stars)</option>
+                    <option value="2">★★☆☆☆ (2 Stars)</option>
+                    <option value="1">★☆☆☆☆ (1 Star)</option>
+                </select>
+
+                <label for="review">Your Review:</label>
+                <textarea id="review" name="review" rows="6" placeholder="Share your experience..." required></textarea>
+
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Explore Uganda. All rights reserved.</p>
+        <p>Contact us: info@exploreuganda.com | +256 123 456 789</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings - Explore Uganda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="marquee">
+            <span>Welcome to Explore Uganda – The Pearl of Africa 🌍 | Plan Your Adventure Today! 🦁🏞️</span>
+        </div>
+        
+        <h1>Book Your Ugandan Experience</h1>
+        <nav>
+            <a href="home.html#map">Home</a>
+            <a href="itinerary.html">Itinerary Planner</a>
+            <a href="bookings.html">Bookings</a>
+            <a href="business-listings.html">Local Businesses</a>
+            <a href="reviews.html">Reviews</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="booking-intro">
+            <h2>Plan Your Trip to Uganda</h2>
+            <p>Uganda is full of breathtaking landscapes, rich wildlife, and vibrant culture. Use this page to book accommodations, guided tours, transportation, and unique cultural experiences. Let us help you explore the Pearl of Africa with ease!</p>
+        </section>
+
+        <section id="accommodations">
+            <h2>Accommodations</h2>
+            <p>Find the perfect place to stay, whether you’re seeking luxury lodges, eco-friendly resorts, or budget-friendly guesthouses.</p>
+            <form action="php/submit-booking.php" method="post">
+                <label for="hotel">Choose a Hotel/Lodge:</label>
+                <select id="hotel" name="hotel">
+                    <option value="serena-kampala">Kampala Serena Hotel</option>
+                    <option value="murchison-lodge">Murchison River Lodge</option>
+                    <option value="lake-bunyonyi-resort">Lake Bunyonyi Eco Resort</option>
+                    <option value="gorilla-trekking-lodge">Gorilla Trekking Lodge, Bwindi</option>
+                </select>
+
+                <label for="checkin">Check-In Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+
+                <label for="checkout">Check-Out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>
+
+                <button type="submit">Book Accommodation</button>
+            </form>
+        </section>
+
+        <section id="tours">
+            <h2>Guided Tours & Safaris</h2>
+            <p>Embark on unforgettable journeys through Uganda’s national parks, lakes, and cultural sites. Choose from guided safaris, gorilla trekking adventures, and city tours.</p>
+            <form action="php/submit-tour.php" method="post">
+                <label for="tour">Select a Tour:</label>
+                <select id="tour" name="tour">
+                    <option value="gorilla-trekking">Gorilla Trekking - Bwindi Impenetrable Forest</option>
+                    <option value="murchison-falls-safari">Murchison Falls Safari</option>
+                    <option value="nile-rafting-jinja">White Water Rafting on the Nile - Jinja</option>
+                    <option value="kidepo-national-park">Kidepo Valley National Park Wildlife Tour</option>
+                </select>
+
+                <label for="tour-date">Tour Date:</label>
+                <input type="date" id="tour-date" name="tour-date" required>
+
+                <button type="submit">Book Tour</button>
+            </form>
+        </section>
+
+        <section id="transport">
+            <h2>Transportation Services</h2>
+            <p>Book reliable transportation to get around Uganda. Choose between car rentals, private shuttles, or even boat rides on Lake Victoria.</p>
+            <form action="submit-transport.php" method="post">
+                <label for="transport">Choose a Service:</label>
+                <select id="transport" name="transport">
+                    <option value="airport-shuttle">Airport Shuttle - Entebbe to Kampala</option>
+                    <option value="car-rental">4x4 Car Rental (Self-Drive or With Driver)</option>
+                    <option value="lake-boat-ride">Boat Ride on Lake Victoria</option>
+                    <option value="boda-boda-tour">Boda Boda City Tour - Kampala</option>
+                </select>
+
+                <label for="pickup-date">Pickup Date:</label>
+                <input type="date" id="pickup-date" name="pickup-date" required>
+
+                <label for="pickup-location">Pickup Location:</label>
+                <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required>
+
+                <button type="submit">Book Transport</button>
+            </form>
+        </section>
+
+        <section id="cultural-experiences">
+            <h2>Cultural Experiences</h2>
+            <p>Immerse yourself in Uganda’s rich cultural heritage. Participate in traditional dance workshops, visit local villages, or attend storytelling events.</p>
+            <form action="submit-experience.php" method="post">
+                <label for="experience">Choose an Experience:</label>
+                <select id="experience" name="experience">
+                    <option value="traditional-dance">Traditional Dance & Music Workshop</option>
+                    <option value="batwa-cultural-visit">Batwa Community Cultural Visit</option>
+                    <option value="craft-making">Craft-Making with Local Artisans</option>
+                    <option value="food-tasting">Ugandan Food Tasting & Cooking Class</option>
+                </select>
+
+                <label for="experience-date">Experience Date:</label>
+                <input type="date" id="experience-date" name="experience-date" required>
+
+                <button type="submit">Book Experience</button>
+            </form>
+        </section>
+
+        <section id="booking-tips">
+            <h2>Booking Tips for Uganda</h2>
+            <ul>
+                <li><strong>Plan Early:</strong> Popular lodges and tours can book out months in advance, especially during peak seasons (June–September, December–February).</li>
+                <li><strong>Visa Requirements:</strong> Check visa requirements and apply in advance if needed. Many visitors can get a visa on arrival or online.</li>
+                <li><strong>Pack for Adventure:</strong> Bring hiking shoes, insect repellent, and lightweight clothing for safaris and outdoor experiences.</li>
+                <li><strong>Respect Local Customs:</strong> Uganda is a culturally rich country — be respectful when visiting local communities and religious sites.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Explore Uganda. All rights reserved.</p>
+        <p>Contact us: info@exploreuganda.com | +256 123 456 789</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerary Planner - Explore Uganda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="marquee">
+            <span>Welcome to Explore Uganda – The Pearl of Africa 🌍 | Plan Your Perfect Adventure! 🦁🏞️</span>
+        </div>
+        
+        <h1>Uganda Itinerary Planner</h1>
+        <nav>
+            <a href="home.html#map">Home</a>
+            <a href="itinerary.html">Itinerary Planner</a>
+            <a href="bookings.html">Bookings</a>
+            <a href="business-listings.html">Local Businesses</a>
+            <a href="reviews.html">Reviews</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="itinerary-intro">
+            <h2>Create Your Dream Trip</h2>
+            <p>Use this planner to design your personalized Uganda adventure. Whether you want to track gorillas, explore national parks, or immerse yourself in local culture, we’ll help you craft the perfect trip!</p>
+        </section>
+
+        <section id="suggested-routes">
+            <h2>Suggested Itineraries</h2>
+
+            <div class="route-card">
+                <h3>3-Day Gorilla Trekking Adventure 🦍</h3>
+                <ul>
+                    <li><strong>Day 1:</strong> Arrive in Entebbe → Transfer to Bwindi Impenetrable Forest</li>
+                    <li><strong>Day 2:</strong> Gorilla Trekking in Bwindi → Relax at a local lodge</li>
+                    <li><strong>Day 3:</strong> Explore Lake Bunyonyi → Return to Kampala or Entebbe</li>
+                </ul>
+            </div>
+
+            <div class="route-card">
+                <h3>7-Day Safari & Cultural Tour 🐘</h3>
+                <ul>
+                    <li><strong>Day 1:</strong> Arrive in Entebbe → City tour of Kampala</li>
+                    <li><strong>Day 2-3:</strong> Safari in Murchison Falls National Park</li>
+                    <li><strong>Day 4:</strong> Visit Ziwa Rhino Sanctuary → Transfer to Fort Portal</li>
+                    <li><strong>Day 5-6:</strong> Chimpanzee tracking in Kibale Forest & Queen Elizabeth NP Safari</li>
+                    <li><strong>Day 7:</strong> Return to Entebbe → Departure</li>
+                </ul>
+            </div>
+
+            <div class="route-card">
+                <h3>5-Day Adventure & Culture Trip 🚀</h3>
+                <ul>
+                    <li><strong>Day 1:</strong> Explore Jinja → Whitewater rafting on the Nile</li>
+                    <li><strong>Day 2:</strong> Sipi Falls hike & coffee tour</li>
+                    <li><strong>Day 3:</strong> Drive to Mbale → Mount Elgon exploration</li>
+                    <li><strong>Day 4:</strong> Cultural experience with the Karamojong community</li>
+                    <li><strong>Day 5:</strong> Return to Kampala → Ndere Cultural Centre show</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="top-attractions">
+            <h2>Top Attractions in Uganda</h2>
+            <ul>
+                <li><strong>Bwindi Impenetrable Forest:</strong> Home to the endangered mountain gorillas.</li>
+                <li><strong>Murchison Falls National Park:</strong> Witness the mighty Nile river squeeze through a narrow gorge.</li>
+                <li><strong>Queen Elizabeth National Park:</strong> Famous for tree-climbing lions and diverse wildlife.</li>
+                <li><strong>Lake Bunyonyi:</strong> A serene lake surrounded by lush terraced hills.</li>
+                <li><strong>Jinja & the Source of the Nile:</strong> Perfect for adrenaline activities like rafting and bungee jumping.</li>
+            </ul>
+        </section>
+
+        <section id="itinerary-form">
+            <h2>Plan Your Itinerary</h2>
+            <p>Fill out the form below to create your personalized itinerary. We’ll help you map out your days so you can make the most of your time in Uganda!</p>
+            
+            <form action="php/submit_itinerary.php" method="post" class="auth-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="start-date" required>
+
+                <label for="days">Number of Days:</label>
+                <input type="number" id="days" name="days" min="1" max="30" placeholder="Number of days" required>
+
+                <label for="destinations">Select Destinations:</label>
+                <select id="destinations" name="destinations[]" multiple required>
+                    <option value="bwindi">Bwindi Impenetrable Forest</option>
+                    <option value="murchison-falls">Murchison Falls National Park</option>
+                    <option value="queen-elizabeth">Queen Elizabeth National Park</option>
+                    <option value="lake-bunyonyi">Lake Bunyonyi</option>
+                    <option value="jinja">Jinja & Source of the Nile</option>
+                    <option value="kidepo">Kidepo Valley National Park</option>
+                    <option value="sipifalls">Sipi Falls</option>
+                </select>
+
+                <label for="activities">Choose Activities:</label>
+                <textarea id="activities" name="activities" rows="4" placeholder="E.g., Gorilla trekking, Boat safari, Cultural tours, Rafting"></textarea>
+
+                <button type="submit">Generate Itinerary</button>
+            </form>
+        </section>
+
+        <section id="travel-tips">
+            <h2>Travel Tips for Planning Your Trip</h2>
+            <ul>
+                <li><strong>Best Time to Visit:</strong> June to September & December to February (Dry seasons).</li>
+                <li><strong>Health& Safety:</strong> Get vaccinated for yellow fever and carry malaria prevention medication.</li>
+                <li><strong>Transportation:</strong> Consider hiring a 4x4 vehicle for safaris and remote areas.</li>
+                <li><strong>Local Currency:</strong> Ugandan Shilling (UGX) — carry cash for rural areas.</li>
+                <li><strong>Respect Local Culture:</strong> Dress modestly, ask permission before taking photos, and learn a few Luganda phrases to connect with locals!</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Explore Uganda. All rights reserved.</p>
+        <p>Contact us: info@exploreuganda.com | +256 123 456 789</p>
+    </footer>
+</body>
+</html>
